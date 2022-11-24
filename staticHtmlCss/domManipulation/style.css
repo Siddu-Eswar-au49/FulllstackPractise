@@ -1,46 +1,61 @@
-span{
-    display: none;
+span {
+  display: none;
 }
-div{
-    height: 50px;
-    width: 50px;
-    background-color: aqua;
-    margin: 5px;
-    border-radius: 5px;
+div {
+  height: 50px;
+  width: 50px;
+  background-color: aqua;
+  margin: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div:hover[data-player="none"] {
+  background-color: lightcoral;
+}
+
+div[data-currentplayer="x"] span::before {
+  content: "X";
+}
+
+div[data-currentplayer="o"] span::before {
+  content: "O";
+}
+
+div:hover span {
+  display: inline;
+}
+
+div[data-player="x"] span {
+  display: inline;
+}
+
+div[data-player="o"] span {
+  display: inline;
+}
+
+div[data-player="x"] span::before {
+  content: "X";
+}
+
+div[data-player="o"] span::before {
+  content: "O";
+}
+
+body{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-div:hover[data-player="none"]{
-    background-color: lightcoral;
-}
-
-
-div[data-currentplayer='x'] span::before{
-    content: 'X';
-}
-
-div[data-currentplayer='o'] span::before{
-    content: 'O';
-}
-
-div:hover span{
-    display: inline;
-}
-
-div[data-player='x'] span{
-    display: inline;
-}
-
-div[data-player='o'] span{
-    display: inline;
-}
-
-div[data-player='x'] span::before{
-    content: 'X';
-}
-
-div[data-player='o'] span::before{
-    content: 'O';
+main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 180px;
+  background-color: green;
 }
